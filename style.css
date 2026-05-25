@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+/* ------- RESET CSS ------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --footer: #0B0B0B;
+    --azul: #00A8D0;
+    --verde: #054B30;
+    --vermelho: #660202;
+}
+
+.container-grid {
+    width: 78%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-image: url(./Img/FundoSite.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* ------- MENU ------- */
+header {
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 240px;
+}
+
+.menu {
+    max-width: 700px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a {
+    font-size: 17px;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--azul);
+}
+
+.btn-cadastrado {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: var(--azul);
+    color: #FFFFFF;
+
+    padding: 12px 24px;
+    border-radius: 6px;
+
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 1px;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    box-shadow: 0 0 12px rgba(3, 214, 255, 0.4);
+}
+
+.btn-cadastrado:hover {
+    transform: translate(-2px);
+    box-shadow: 0 0 20px rgba(3, 214, 255, 0.8);
+}
+
+.btn-cadastrado svg {
+    width: 16px;
+}
+
+/* ------- PERGUNTA PÓS VÍDEO ------- */
+.video-aula {
+    margin-top: 70px;
+}
+
+.video-aula video {
+    width: 100%;
+    height: 650px;
+
+    /* ------- "O OBJECT-FIT: COVER" FAZ O VÍDEO PREENCHER TODO O ESPAÇO DA CAIXA SEM DEFORMAR ------- */
+    object-fit: cover;
+
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    background: #FFFFFF;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+/* ------- PERGUNTA PÓS VÍDEO ------- */
+
+.trilha-video {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 120px;
+}
+
+.titulo-trilha {
+    width: 100%;
+    max-width: 1400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.titulo-trilha span {
+    color: var(--azul);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.linha-esquerda {
+    width: 260px;
+    height: 1px;
+    flex: 1;
+
+    background: linear-gradient(90deg,
+            transparent,
+            #00A8D0);
+}
+
+.linha-direita {
+    width: 260px;
+    height: 1px;
+    flex: 1;
+
+    background: linear-gradient(90deg,
+            #00A8D0,
+            transparent);
+}
+
+.titulo-video {
+    margin-top: 35px;
+    color: var(--azul);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.texto-video {
+    max-width: 760px;
+    margin-top: 25px;
+
+    color: #FFFFFF;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+
+    text-align: center;
+}
+
+.texto-video strong {
+    font-weight: 650;
+    color: #FFFFFF;
+}
+
+/* ------- PERGUNTA ------- */
+
+.quiz {
+    margin-top: 140px;
+}
+
+.titulo-quiz {
+    color: var(--azul);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.caixa-pergunta {
+    margin-top: 60px;
+    padding: 60px;
+
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    background: rgba(0, 168, 208, 0.2);
+
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+
+}
+
+.pergunta {
+    max-width: 820px;
+    margin: 0 auto 50px auto;
+    color: #FFFFFF;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 55px;
+    text-align: center;
+}
+
+.alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.alternativas input {
+    display: none;
+}
+
+.alternativa {
+    width: 100%;
+    padding: 24px 30px;
+
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: #FFFFFF;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    cursor: pointer;
+
+    transition:
+        border 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+
+.alternativa:hover {
+    border-color: #FFFFFF;
+    box-shadow:
+        0 0 12px rgba(0, 168, 208, 0.45),
+        inset 0 0 12px rgba(0, 168, 208, 0.08);
+}
+
+.alternativa:active {
+    transform: scale(0.995);
+
+    box-shadow:
+        0 0 18px rgba(255, 255, 255, 0.4),
+        inset 0 0 18px rgba(255, 255, 255, 0.08);
+}
+
+.circulo {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    transition: 0.3s ease;
+}
+
+.circulo svg {
+    width: 25px;
+    height: 25px;
+
+    color: var(--azul);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 0.25s ease;
+}
+
+/* RESPOSTA CERTA */
+
+#alt2:checked+.certa {
+    border-color: #FFFFFF;
+    box-shadow:
+        0 0 20px rgba(255, 255, 255, 0.25),
+        inset 0 0 20px rgba(255, 255, 255, 0.04);
+}
+
+#alt2:checked+.certa .circulo {
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+#alt2:checked+.certa .icone-check {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* RESPOSTAS ERRADAS */
+
+#alt1:checked+.errada,
+#alt3:checked+.errada,
+#alt4:checked+.errada {
+    border-color: #FFFFFF;
+
+    box-shadow:
+        0 0 20px rgba(255, 255, 255, 0.25),
+        inset 0 0 20px rgba(255, 255, 255, 0.04);
+}
+
+#alt1:checked+.errada .circulo,
+#alt3:checked+.errada .circulo,
+#alt4:checked+.errada .circulo {
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+#alt1:checked+.errada .icone-x,
+#alt3:checked+.errada .icone-x,
+#alt4:checked+.errada .icone-x {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.botoes-pergunta {
+    margin-top: 75px;
+    margin-bottom: 120px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-sair,
+.btn-avancar {
+    width: 170px;
+    height: 60px;
+
+    border-radius: 6px;
+    border: 2px solid #FFFFFF;
+
+    color: #FFFFFF;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn-sair {
+    background: var(--vermelho);
+
+    box-shadow:
+        0 0 12px rgba(102, 2, 2, 0.5);
+}
+
+.btn-avancar {
+    background: var(--verde);
+
+    box-shadow:
+        0 0 12px rgba(5, 75, 48, 0.5);
+}
+
+.btn-sair:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 18px rgba(255, 255, 255, 0.2),
+        0 0 22px rgba(255, 255, 255, 0.8);
+}
+
+.btn-avancar:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 18px rgba(255, 255, 255, 0.2),
+        0 0 22px rgba(255, 255, 255, 0.8);
+}
+
+/* ------- O "ACTIVE" APLICA UM ESTILO ENQUANTO O BOTÃO ESTÁ SENDO CLICADO, E O "TRANSFORM SCALE(0.97)" FAZ ELE DIMINUIR LEVEMENTE DE TAMANHO, CRIANDO EFEITO DE BOTÃO PRESSIONADO.
+ ------- */
+
+.btn-sair:active,
+.btn-avancar:active {
+    transform: scale(0.97);
+}
+
+/* ------- FOOTER ------- */
+
+footer {
+    background-color: var(--footer);
+    padding: 80px 0;
+    color: #BFEFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.roda-pe {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.logo-footer {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-footer img {
+    width: 220px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.titulo-footer {
+    font-family: "Poppins", sans-serif;
+    color: var(--azul);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navegacao-footer ul {
+    list-style: none;
+}
+
+.navegacao-footer li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navegacao-footer li:hover {
+    color: var(--azul);
+}
+
+.item-contato {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+}
+
+.item-contato svg {
+    width: 30px;
+    height: 30px;
+    color: var(--azul);
+}
+
+.social {
+    margin-top: 25px;
+    display: flex;
+    gap: 35px;
+}
+
+.social svg {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    fill: #BFEFFF;
+    color: #BFEFFF;
+    transition: 0.3s ease;
+}
+
+.social svg:hover {
+    color: var(--azul);
+}
+
+.copy {
+    margin-top: 70px;
+
+    color: #BFEFFF;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+
+    opacity: 0.8;
+    text-align: center;
+}
